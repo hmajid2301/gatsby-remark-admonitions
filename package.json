@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-remark-admonitions",
+  "version": "0.1.0",
+  "description": "Add gatsby-remark-admonitions support to Gatsby",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier ./*.js"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-remark-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/hmajid2301/gatsby-remark-admonitions.git"
+  },
+  "author": "Haseeb Majid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/hmajid2301/gatsby-remark-admonitions/issues"
+  },
+  "homepage": "https://gitlab.com/hmajid2301/gatsby-remark-admonitions#readme",
+  "dependencies": {
+    "remark-admonitions": "^1.2.1",
+    "unified": "^8.4.2",
+    "unist-util-visit": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^1.19.1"
+  }
+}

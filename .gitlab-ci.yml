@@ -1,0 +1,34 @@
+image: node:12
+
+stages:
+  - test
+  - publish
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+before_script:
+  - yarn
+
+lint:
+  stage: test
+  script:
+    - yarn lint
+
+lint:format:
+  stage: test
+  script:
+    - yarn format --check
+
+publish:npm:
+  stage: publish
+  only:
+    - /^release/.*$/
+  script:
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+    - yarn publish --non-interactive
