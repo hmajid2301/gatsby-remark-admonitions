@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-admonitions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add gatsby-remark-admonitions support to Gatsby",
   "main": "index.js",
   "scripts": {
